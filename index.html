@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -56,7 +56,7 @@
           <span class="btn-text"><strong>Call Olivia</strong><small>084 812 3853</small></span>
         </a>
 
-        <a class="btn btn-save" href="olivia-sigamoney.vcf" download>
+        <a class="btn btn-save" href="olivia-sigamoney.vcf" download="Olivia-Sigamoney.vcf">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
           <span class="btn-text"><strong>Save to my contacts</strong></span>
         </a>
@@ -75,19 +75,6 @@
           <li>Life cover</li>
         </ul>
       </section>
-
-      <!-- QR code -->
-      <section class="qr-panel" aria-labelledby="qr-title">
-        <h2 id="qr-title">Scan to open this page</h2>
-        <p>Point your phone camera at the code to save Olivia's details.</p>
-        <div id="qr" class="qr-box" aria-label="QR code for this page"></div>
-        <p id="qr-note" class="qr-note" role="status"></p>
-        <div class="qr-actions">
-          <button type="button" id="download-qr" class="btn-small">Download QR code</button>
-          <button type="button" id="share-link" class="btn-small">Share this page</button>
-        </div>
-        <p id="toast" class="toast" role="status" aria-live="polite"></p>
-      </section>
     </div>
   </main>
 
@@ -95,8 +82,5 @@
     <p>&copy; 2026 Olivia Sigamoney</p>
   </footer>
 
-  <!-- QR code library (loads from cdnjs) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
