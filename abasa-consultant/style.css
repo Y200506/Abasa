@@ -1,0 +1,245 @@
+/* ---------- Colours (change them here and the whole site updates) ---------- */
+:root {
+  --absa-red: #BE0028;     /* exact colour of the Absa logo background */
+  --burgundy: #5A0B27;
+  --plum: #3A1450;
+  --violet: #6B2FA0;
+  --violet-soft: #F0E8F6;
+  --blush: #FCF7F9;
+  --ink: #24101C;
+  --muted: #6B5A66;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; background: var(--plum); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: linear-gradient(165deg, var(--burgundy) 0%, var(--plum) 70%, #2A0E3B 100%);
+}
+
+/* ---------- Top bar with logo ---------- */
+.topbar {
+  background: var(--absa-red);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+.topbar img {
+  display: block;
+  width: 72px;
+  height: 72px;
+}
+
+/* ---------- Layout (phone first) ---------- */
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.portrait {
+  background: #fff;
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.details {
+  position: relative;
+  margin-top: -28px;                 /* sheet slides up over the bottom of the photo */
+  padding: 32px 20px 40px;
+  background: var(--blush);
+  border-radius: 28px 28px 0 0;
+}
+
+/* ---------- Name ---------- */
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 8vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--burgundy);
+}
+.role {
+  margin: 6px 0 24px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--violet);
+}
+
+/* ---------- Buttons ---------- */
+.actions {
+  display: grid;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 60px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn:active { transform: scale(0.985); }
+
+.btn svg {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.btn-text { display: flex; flex-direction: column; min-width: 0; }
+.btn-text strong { font-size: 1.0625rem; font-weight: 700; line-height: 1.25; }
+.btn-text small { font-size: 0.9375rem; opacity: 0.92; overflow-wrap: anywhere; }
+
+.btn-whatsapp { background: var(--absa-red); }
+.btn-email    { background: var(--violet); }
+.btn-call     { background: var(--burgundy); }
+.btn-save {
+  background: var(--violet-soft);
+  color: var(--plum);
+  border-color: #D9C8E8;
+}
+
+:focus-visible {
+  outline: 3px solid #FFB020;
+  outline-offset: 3px;
+}
+
+/* ---------- Services ---------- */
+.services { margin-top: 36px; }
+h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--burgundy);
+}
+.services ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services li {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--violet-soft);
+  color: var(--plum);
+  font-weight: 600;
+  font-size: 0.9875rem;
+}
+
+/* ---------- QR panel ---------- */
+.qr-panel {
+  margin-top: 36px;
+  padding: 28px 20px;
+  border-radius: 24px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(160deg, var(--plum), var(--burgundy));
+}
+.qr-panel h2 { color: #fff; }
+.qr-panel p { margin: 0 0 18px; opacity: 0.92; }
+
+.qr-box {
+  width: min(240px, 100%);
+  margin: 0 auto;
+  padding: 14px;
+  background: #fff;
+  border-radius: 16px;
+  min-height: 100px;
+}
+[hidden] { display: none !important; }
+.qr-box img, .qr-box canvas { display: block; width: 100%; height: auto; }
+
+.qr-note { margin: 14px 0 0 !important; font-size: 0.9375rem; }
+.qr-note:empty { display: none; }
+
+.qr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.btn-small {
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font: 600 1rem var(--font-body);
+  cursor: pointer;
+}
+.btn-small:hover { background: rgba(255, 255, 255, 0.14); }
+.btn-small:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.toast { min-height: 1.5em; margin: 14px 0 0 !important; font-weight: 600; }
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 22px 20px 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  background: var(--plum);
+}
+.footer p { margin: 0; }
+
+/* ---------- Bigger screens: photo left, details right ---------- */
+@media (min-width: 900px) {
+  .page {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: 28px;
+    align-items: start;
+    padding: 40px 24px;
+  }
+  .portrait {
+    position: sticky;
+    top: 24px;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+  .details {
+    margin-top: 0;
+    padding: 40px 36px;
+    border-radius: 28px;
+  }
+  .footer { background: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
